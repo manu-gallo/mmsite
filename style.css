@@ -1,0 +1,241 @@
+
+/* ===== CONFIGURAÇÕES GERAIS ===== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fff7f8;
+    color: #49333b;
+    text-align: center;
+    margin: 0;
+    padding: 45px 24px;
+    line-height: 1.6;
+}
+
+/* ===== TÍTULOS E TEXTOS ===== */
+
+h1 {
+    color: #a95773;
+    font-size: clamp(30px, 5vw, 44px);
+    line-height: 1.2;
+    margin-bottom: 18px;
+    letter-spacing: -1px;
+}
+
+h2 {
+    color: #804459;
+    font-size: clamp(20px, 3vw, 27px);
+    line-height: 1.4;
+}
+
+h3 {
+    line-height: 1.4;
+}
+
+p {
+    font-size: 16px;
+}
+
+/* ===== BOTÕES ===== */
+
+button {
+    background-color: #c77991;
+    color: white;
+    border: 1px solid #c77991;
+    padding: 13px 23px;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition:
+        background-color 0.25s ease,
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+    box-shadow: 0 4px 12px rgba(169, 87, 115, 0.12);
+}
+
+button:hover {
+    background-color: #a95773;
+    border-color: #a95773;
+    transform: translateY(-2px);
+    box-shadow: 0 7px 16px rgba(169, 87, 115, 0.2);
+}
+
+button:active {
+    transform: scale(0.97);
+}
+
+/* ===== PRIMEIRA TELA ===== */
+
+#message {
+    color: #a95773;
+    font-weight: 600;
+    margin-top: 18px;
+}
+
+/* ===== TÍTULO DA SEÇÃO DE QUALIDADES ===== */
+
+#second-screen > h1 {
+    margin-top: 10px;
+}
+
+#second-screen > h2 {
+    margin-bottom: 10px;
+}
+
+#second-screen > p {
+    color: #92727d;
+    margin-bottom: 32px;
+}
+
+/* ===== GRADE DE QUALIDADES ===== */
+
+.qualities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    max-width: 900px;
+    margin: 0 auto 30px;
+    text-align: left;
+}
+
+/* ===== CARTÕES INDIVIDUAIS ===== */
+
+.quality-card {
+    background-color: #ffffff;
+    border: 1px solid #f0d9e0;
+    border-radius: 18px;
+    padding: 24px;
+    margin: 0;
+    min-width: 0;
+    box-shadow: 0 5px 18px rgba(120, 65, 85, 0.045);
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.quality-card:hover {
+    transform: translateY(-4px);
+    border-color: #dba4b5;
+    box-shadow: 0 10px 24px rgba(120, 65, 85, 0.09);
+}
+
+.quality-card h3 {
+    color: #a95773;
+    font-size: 18px;
+    margin: 0 0 12px;
+}
+
+.quality-card p {
+    color: #65515a;
+    font-size: 15px;
+    margin: 0;
+    line-height: 1.8;
+}
+
+.quality-card small {
+    display: block;
+    color: #b66c84;
+    font-size: 12px;
+    font-style: italic;
+    margin-top: 14px;
+    line-height: 1.6;
+}
+
+/* ===== SÉTIMO CARTÃO CENTRALIZADO ===== */
+
+.quality-card:last-child {
+    grid-column: 1 / -1;
+    justify-self: center;
+    width: min(100%, 560px);
+}
+
+/* ===== BOTÃO DE CONTINUAR ===== */
+
+#continue-btn {
+    margin: 10px 0 25px;
+}
+
+/* ===== PERGUNTA FINAL ===== */
+
+#third-screen {
+    max-width: 750px;
+    margin: 50px auto;
+}
+
+#third-screen > p {
+    color: #92727d;
+    margin: 22px 0 28px;
+}
+
+#answer-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    min-height: 65px;
+    margin-top: 30px;
+}
+
+#yes-btn {
+    background-color: #b86b84;
+}
+
+#no-btn {
+    background-color: #ffffff;
+    color: #a95773;
+    border-color: #dba4b5;
+    box-shadow: none;
+}
+
+/* ===== TELA FINAL ===== */
+
+#final-screen {
+    max-width: 700px;
+    margin: 70px auto;
+    padding: 30px 10px;
+}
+
+#final-screen h1 {
+    color: #a95773;
+}
+
+#final-screen p {
+    color: #65515a;
+    line-height: 1.8;
+}
+
+/* ===== CELULARES ===== */
+
+@media (max-width: 600px) {
+    body {
+        padding: 30px 16px;
+    }
+
+    .qualities-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .quality-card:last-child {
+        grid-column: auto;
+        width: 100%;
+    }
+
+    .quality-card {
+        padding: 21px;
+    }
+
+    .quality-card h3 {
+        font-size: 17px;
+    }
+
+    #third-screen {
+        margin-top: 30px;
+    }
+}
